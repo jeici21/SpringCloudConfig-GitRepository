@@ -1,0 +1,18 @@
+# HTTP server
+server:
+  port: 8888
+
+spring:
+  # Spring Cloud Config Server Repository
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jeici21/SpringCloudConfig-GitRepository
+          username: ${GIT_USER}
+          password: ${GIT_PASSWORD}
+
+  security:
+    user:
+      name: admin
+      password: 1234
